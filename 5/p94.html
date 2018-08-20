@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>操作方法</title>
+	<script type="text/javascript" charset="utf-8">
+		var colors = ["red", "green", "blue"];
+		var colors1 = colors.concat("yellow",["black","brown"]);
+
+		//alert(colors);
+		//alert(colors1);//red, green, blue, yellow, black, brown
+
+		var c2 = colors1.slice(1);
+		var c3 = colors1.slice(1,4);
+
+		//alert(c2);//green, blue, yellow, black
+		//alert(c3);//green,blue,yellow
+		//alert(colors1); slice不会影响数组
+		
+		var cl = ["red", "blue", "green"];//删除第一项
+		var removed = cl.splice(0,1);
+		alert(cl);//blue, green
+		alert(removed);//返回值red
+		
+		removed = cl.splice(1, 0,"yellow", "orange");//从位置1开始插入两项
+		alert(cl);//blue, yellow, orange,green
+		alert(removed);//返回空数组
+
+		removed = cl.splice(1, 1, "red", "puple");//插入两项，删除一项
+		alert(cl);//blue, red, puple, orange, blue
+		alert(removed);//yellow
+	
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

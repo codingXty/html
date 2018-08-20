@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>位置方法</title>
+	<script type="text/javascript" charset="utf-8">
+		var number = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+
+		alert(number.indexOf(4)); //3
+		alert(number.lastIndexOf(4)); //5
+
+		alert(number.indexOf(4,4)); //5
+		alert(number.lastIndexOf(4,4)); //3
+
+		var person = {name: "Nic"};
+		var people = [{name: "Nic"}];
+
+		var morePeople = [person];
+
+		alert(people.indexOf(person)); //-1
+		alert(morePeople.indexOf(person)); //0
+	</script>
+</head>
+<body>
+
+</body>
+</html>

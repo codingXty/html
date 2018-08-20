@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>重排序方法</title>
+	<script type="text/javascript" charset="utf-8">
+		var values = [0, 1, 5, 10, 15];
+		//values.reverse(); 反转
+		
+		function compare(values1, values2){//升序
+			if(values1 < values2){
+				return -1;
+			}else if(values1 > values2){
+				return 1;
+			}else {
+				return 0;
+			}
+		}
+
+		function compare1(values1, values2){
+			return values2 - values;
+		}
+
+		//values.sort(compare);
+		values.sort(compare1)
+		alert(values);
+	</script>
+</head>
+<body>
+	<button click="one()">click</button>
+</body>
+</html>

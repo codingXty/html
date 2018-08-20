@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>转换方法</title>
+	<script  type="text/javascript" charset="utf-8">
+		var person1 = {
+				toString : function(){
+					return "Nic";
+				},
+
+				toLocaleString :function(){
+					return "Nik"
+				}
+			};
+
+		var person2 = {
+				toLocaleString : function(){
+					return "Grig";
+				},
+
+				toString : function(){
+					return "Greg";
+				}
+			};
+
+		var colors = ["red","blue","green"];
+
+
+		function at(){
+			alert(colors.join("||"));//分隔符
+			var people = [person1,person2];
+			alert(people);
+			alert(people.toString());
+			alert(people.toLocaleString());
+		}
+	</script>
+</head>
+<body>
+	<input type="button" name="a" onclick=" at()">
+</body>
+</html>
