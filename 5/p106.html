@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RegExp实例属性</title>
+	<script type="text/javascript" charset="utf-8">
+		var text = "mom and dad and baby";
+		var pattern = /mom( and dad( and baby)?)?/gi;
+
+		var matches = pattern.exec(text);
+		alert(matches.index);
+		alert(matches.input);
+		alert(matches[0]);
+		alert(matches[1]);
+		alert(matches[2]);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
