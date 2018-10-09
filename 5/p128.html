@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>字符串的模式匹配方法</title>
+	<script type="text/javascript" charset="utf-8">
+		function htmlEscape(text){
+			return text.replace(/[< > " &]/g ,function(match, pos, originalText){
+				switch (match) {
+					case "<":
+						return "&lt;";
+					case ">":
+						return "&gt;";
+					case "&":
+						return "&amp;";
+					case "\"":
+						return "&quot;";
+				}
+			});
+		}
+
+		alert(htmlEscape("<p class=\"greeting\">Hello World !</p> "));
+	</script>
+</head>
+<body>
+
+</body>
+</html>  

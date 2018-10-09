@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>函数属性和方法</title>
+	<script type="text/javascript" charset="utf-8">
+		window.color = "red";
+		var o = {color:"blue"};
+
+		function sayColor(){
+			alert(this.color);
+		}
+
+		sayColor();	//red
+
+		alert(sayColor.call(this));	//red
+		alert(sayColor.call(window));	//red
+		alert(sayColor.call(o));	//blue
+	</script>
+</head>
+<body>
+
+</body>
+</html>

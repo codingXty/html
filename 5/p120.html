@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Boolean类型</title>
+	<script type="text/javascript" charset="utf-8">
+		var falseObject = new Boolean(false);
+		var result = falseObject && true;
+		alert(result);	//true;
+
+		var falseValue = false;
+		result = falseObject && true;
+		alert(result);  //false
+
+		alert(typeof falseObject); //object
+		alert(typeof falseValue);	//boolean
+		alert(falseObject instanceof Boolean);	//true;
+		alert(falseValue instanceof Boolean);	//false; 
+	</script>
+</head>
+<body>
+
+</body>
+</html>

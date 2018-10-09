@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>字符串位置方法</title>
+	<script type="text/javascript" charset="utf-8">
+		var stringValue = "loren ispum dolor sit eaet, consectetur adispicing elit";
+		var position = new Array();
+		var pos = stringValue.indexOf("e");
+
+		while(pos > -1 ){
+			position.push(pos);
+			pos = stringValue.indexOf("e" , pos+1);
+		}
+
+		alert(position);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
