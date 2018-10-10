@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>原型对象的问题</title>
+	<script type="text/javascript" charset="utf-8">
+		function Person(){
+
+		}
+
+		Person.prototype = {
+			constructor: Person,
+			name: "zhangsan",
+			age:29,
+			job:"teacher",
+			friends:["lisi","wanger"],
+			sayName:function(){
+				alert(this.name);
+			}
+		};
+
+		var person1 = new Person();
+		var person2 = new Person();
+
+		person1.friends.push("van");
+		alert(person1.friends);
+		alert(person2.friends);
+		alert(person1.friends == person2.friends);
+
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

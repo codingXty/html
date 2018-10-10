@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>defineProperty()方法</title>
+	<script type="text/javascript" charset="utf-8">
+		var person = {};
+		Object.defineProperty(person, "name", {
+			writable:false ,
+			value:"NICK"
+		});
+		alert(person.name);
+		person.name = "GREG";
+		alert(person.name);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

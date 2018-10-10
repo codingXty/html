@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>同名属性</title>
+	<script type="text/javascript" charset="utf-8">
+		function Person(){
+			Person.prototype.name = "zhangsan";
+			Person.prototype.age = 29;
+			Person.prototype.job = "teacher";
+			Person.prototype.sayName = function(){
+				alert(this.name);
+			}
+		};
+
+		var person1 = new Person(); 
+
+		var person2 = new Person();
+
+		person1.name = "lisi";
+		alert(person1.name);
+		alert(person2.name);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

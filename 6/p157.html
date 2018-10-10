@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>原生对象的原型</title>
+	<script type="text/javascript" charset="utf-8">
+		String.prototype.startsWith = function (text){
+			return this.indexOf(text) == 0;
+		};
+
+		var msg = "Hello World !";
+		alert(msg.startsWith("Hello"));
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

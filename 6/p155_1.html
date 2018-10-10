@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>更简单的原型语法</title>
+	<script type="text/javascript" charset="utf-8">
+		function Person(){
+
+		}
+
+		Person.prototype = {
+			constructor: Person,
+			name: "zhangsan",
+			age:29,
+			job:"teacher",
+			sayName:function(){
+				alert(this.name);
+			}
+		};
+
+		var friend = new Person();
+
+		alert(friend.constructor == Person); //false
+	</script>
+</head>
+<body>
+
+</body>
+</html>

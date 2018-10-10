@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>原型的动态性</title>
+	<script type="text/javascript" charset="utf-8">
+		function Person(){
+
+		}
+
+		var friend = new Person();
+
+		Person.prototype = {
+			constructor: Person,
+			name: "zhangsan",
+			age:29,
+			job:"teacher",
+			sayName:function(){
+				alert(this.name);
+			}
+		};
+
+		
+		eval(friend.sayName());
+	</script>
+</head>
+<body>
+
+</body>
+</html>

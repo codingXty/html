@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>原型与in操作符</title>
+	<script type="text/javascript" charset="utf-8">
+		function Person(){
+			Person.prototype.name = "zhangsan";
+			Person.prototype.age = 29;
+			Person.prototype.job = "teacher";
+			Person.prototype.sayName = function(){
+				alert(this.name);
+			}
+		};
+
+		var person1 = new Person(); 
+
+		var person2 = new Person();
+
+		alert(person1.hasOwnProperty("name"));	//false
+		alert("name" in person1);	//true
+
+		person1.name = "Greg";
+		alert(person1.name); //实例
+		alert(person1.hasOwnProperty("name"));	//true
+		alert("name" in person1);	//true
+
+		alert(person2.name); //原型
+		alert(person2.hasOwnProperty("name"));	//false
+		alert("name" in person2);	//true
+
+		delete person1.name;
+		alert(person1.name); //原型
+		alert(person1.hasOwnProperty("name"));	//false
+		alert("name" in person1);	//true
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

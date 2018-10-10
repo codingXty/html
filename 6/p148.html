@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>原型模式</title>
+	<script type="text/javascript" charset="utf-8">
+		function Person(){
+			Person.prototype.name = "zhangsan";
+			Person.prototype.age = 29;
+			Person.prototype.job = "teacher";
+			Person.prototype.sayName = function(){
+				alert(this.name);
+			}
+		};
+
+		var person1 = new Person(); 
+
+		var person2 = new Person();
+		//person2.sayName();
+
+		alert(person1.sayName() == person2.sayName());
+
+		alert(Person.prototype.isPrototypeOf(person1));	//true
+
+		alert(Object.getPrototypeOf(person1) == Person.prototype);	//true
+		alert(Object.getPrototypeOf(person1).name);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

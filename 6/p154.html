@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object.keys()方法</title>
+	<script type="text/javascript" charset="utf-8">
+		function Person(){}
+
+		Person.prototype.name = "zhangsan";
+		Person.prototype.age = 29;
+		Person.prototype.job = "teacher";
+		Person.prototype.sayName = function(){
+			alert(this.name);
+			};
+
+		var keys = Object.keys(Person.prototype);
+		alert(keys);	//name,age,job，sayName
+
+		var p1 = new Person();
+		p1.name = "Rob";
+		p1.age = 31;
+		var p1keys = Object.keys(p1);
+		alert(p1keys);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
