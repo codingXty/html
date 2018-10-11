@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>传递参数</title>
+	<script type="text/javascript" charset="utf-8">
+		function SuperType(name){
+			this.name = name;
+		}
+
+		function SubType(){
+			//继承了SuperType，同时还传递了参数
+			SuperType.call(this, "NIKE");
+
+			//实例属性
+			this.age = 29;
+		}
+
+
+		var instance = new SubType();
+		alert(instance.name);
+		alert(instance.age);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
