@@ -4,6 +4,7 @@
 	<title>寄生组合式继承</title>
 	<script type="text/javascript" charset="utf-8">
 		function inheritPrototype(subType , superType){
+			
 			var prototype = object(superType.prototype); //创建超类型原型的第一个副本
 			prototype.constructor = subType;	//创建的副本添加constructor
 			subType.prototype = prototype;	//新创建的对象赋予给子类的原型
