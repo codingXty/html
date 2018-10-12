@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>寄生式继承</title>
+	<script type="text/javascript" charset="utf-8">
+		function createAnother(original){
+			var clone = Object(original);	//通过调用函数创建一个对象
+			clone.sayHi = function(){		//以某种方式来增强这个对象
+				alert("hi");
+			};
+			return clone;					//返回这个对象
+		}
+
+		var person = {
+			name: "NICK" ,
+			friends: ["Shleby" , "Court" ,"vae"]
+		};
+
+		var anotherPerson = createAnother(person);
+		anotherPerson.sayHi();	//hi
+		
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

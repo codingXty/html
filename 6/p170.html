@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>原型式继承</title>
+	<script type="text/javascript" charset="utf-8">
+		var person = {
+			name: "NICK" ,
+			friends: ["Shleby" , "Court" ,"vae"]
+		};
+
+		var anotherPerson = Object(person);
+		anotherPerson.name = "greg";
+		anotherPerson.friends.push("ROB");
+
+		var yetPerson = Object(person);
+		yetPerson.name = "linda";
+		yetPerson.friends.push("Bar");
+
+		alert(person.friends);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
